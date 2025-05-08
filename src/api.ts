@@ -28,3 +28,8 @@ export const savePurchaseRequest = async (data: { bookId: number; contactInfo: s
   const response = await axios.post(`${API_URL}/purchaseRequests`, data);
   return response.data;
 };
+
+export const fetchPurchaseRequests = async () => {
+  const response = await axios.get(`${API_URL}/purchaseRequests`);
+  return response.data;
+};

@@ -20,6 +20,28 @@ p {
   margin-bottom: 10px;
 }
 
+
+/* Стили для кнопки входа в панель администратора */
+.admin-login-button {
+  padding: 10px 20px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+
+.admin-login-button:hover {
+  background-color: #3a5a80;
+}
+
+
 /* Стили для SearchBar */
 .search-bar {
   margin-bottom: 20px;
@@ -130,7 +152,7 @@ p {
   border-top: 1px solid #eee;
 }
 
-/* Обновлённые стили для формы покупки */
+/* Cтили для формы покупки */
 .purchase-form {
   margin: 20px auto;
   padding: 20px;
@@ -201,6 +223,158 @@ select {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-left: 10px;
+}
+
+
+/* Стили для страницы входа */
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #3a5a80;
+}
+
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Стили для панели администратора */
+.admin-panel {
+  padding: 2rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Стили для контейнера кнопок */
+.button-container {
+  display: flex;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+/* Общие стили для кнопок */
+.logout-button, .to-the-site-button {
+  padding: 0.5rem 1rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover, .to-the-site-button:hover {
+  background-color: #3a5a80;
+}
+
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.stat-card p {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a6fa5;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.requests-table th,
+.requests-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.requests-table th {
+  background-color: #f5f5f5;
+  font-weight: 500;
+}
+
+.process-button {
+  padding: 0.5rem 1rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.process-button:hover {
+  background-color: #27ae60;
 }
 
 @media (max-width: 768px) {

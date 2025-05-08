@@ -47,12 +47,23 @@ const BookPage: React.FC = () => {
     loadBook();
   }, [id]);
 
-  if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>{error}</p>;
-
   const handlePurchase = async (contactInfo: string) => {
     try {
-      await savePurchaseRequest({ bookId: book!.id, contactInfo });
+      const request = {
+        bookId: book!.id,
+        bookTitle: book!.title,
+        contactInfo,
+        date: new Date().toLocaleString(),
+        id: Date.now(), // временный ID, в реальном приложении должен генерироваться сервером
+      };
+      
+      // В реальном приложении нужно отправлять на сервер
+      const storedRequests = localStorage.getItem('purchaseRequests');
+      const requests = storedRequests ? JSON.parse(storedRequests) : [];
+      requests.push(request);
+      localStorage.setItem('purchaseRequests', JSON.stringify(requests));
+      
+      await savePurchaseRequest(request);
       alert('Запрос на покупку отправлен!');
     } catch (err) {
       alert('Не удалось отправить запрос на покупку.');
